@@ -164,21 +164,21 @@ def render_downloads_combined(
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         st.download_button(
-            "⬇️ Download CSV (both sections)",
+            "⬇️ Download CSV",
             data=csv_bytes,
             file_name=f"{safe_title}.csv",
             mime="text/csv",
         )
     with c2:
         st.download_button(
-            "⬇️ Download Excel (both sections)",
+            "⬇️ Download Excel",
             data=xlsx_buf.getvalue(),
             file_name=f"{safe_title}.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
     with c3:
         st.download_button(
-            "⬇️ Download Plaintext (both sections)",
+            "⬇️ Download Plaintext",
             data=plaintext.encode("utf-8"),
             file_name=f"{safe_title}.txt",
             mime="text/plain",
